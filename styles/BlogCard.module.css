@@ -1,0 +1,9 @@
+.card {
+  border-radius: 2rem;
+  box-shadow: 15px 20px 40px rgba(216, 211, 211, 0.4);
+}
+
+.imgContainer img {
+  display: block;
+  width: 100%;
+}
