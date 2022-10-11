@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap");
 @font-face {
   font-family: "Brand";
   src: url("../public/Brand.woff");
@@ -17,13 +19,17 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-/* nav {
+nav {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5rem;
-  font-family: "Brand";
-} */
+}
+nav a {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Padauk";
+}
 
 h1 {
   font-size: 1.5rem;
@@ -60,6 +66,12 @@ a {
   font-size: 1.5rem;
   text-decoration: none;
   font-weight: bold;
+}
+
+img {
+  display: block;
+  width: 100%;
+  border-radius: 2px;
 }
 
 @media screen and (max-width: 768px) {
