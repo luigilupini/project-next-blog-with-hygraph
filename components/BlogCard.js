@@ -1,9 +1,9 @@
 import styles from "../styles/BlogCard.module.css";
 import Link from "next/link";
 
-function BlogCard({ key, slug, title, author, coverPhoto, datePublished }) {
+function BlogCard({ slug, title, author, coverPhoto, datePublished }) {
   return (
-    <div className={styles.card} key={key}>
+    <div className={styles.card}>
       <Link href={`/posts/${slug}`}>
         <div className={styles.imgContainer}>
           <img src={coverPhoto.url} alt={title} />

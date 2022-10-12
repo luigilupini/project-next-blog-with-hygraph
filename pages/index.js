@@ -15,9 +15,12 @@ const graphCms = new GraphQLClient(
 );
 // Convenience passthrough `gql` template tag to get the benefits of tooling.
 // It returns the string with any variables given interpolated.
+// https://hygraph.com/docs/api-reference/content-api/pagination
+// Default result size returned by queries fetching multiple entries is 10.
+// You can provide a maximum of 1000 to the first, or last arguments.
 const QUERY = gql`
   {
-    posts {
+    posts(first: 100) {
       id
       title
       datePublished
@@ -57,7 +60,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts }) {
-  // console.log(posts);
   return (
     <div className={styles.container}>
       <Head>
@@ -70,7 +72,7 @@ export default function Home({ posts }) {
         {posts.map((post) => {
           return (
             <BlogCard
-              key={post.id}
+              key={post.slug}
               slug={post.slug}
               title={post.title}
               author={post.author}

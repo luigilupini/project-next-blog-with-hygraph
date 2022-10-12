@@ -29,10 +29,10 @@ const QUERY = gql`
     }
   }
 `;
-
+// https://hygraph.com/docs/api-reference/content-api/pagination
 const SLUGLIST = gql`
   {
-    posts {
+    posts(first: 100) {
       slug
     }
   }

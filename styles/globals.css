@@ -13,17 +13,23 @@
   color: rgb(50, 50, 50);
 }
 
+html {
+  font-size: 75%;
+}
+
 body {
   /* margin: 0% 25%; */
   margin: 0% 15%;
+  /* margin-top: 5%; */
+  margin-bottom: 5%;
   font-family: "Roboto", sans-serif;
 }
 
 nav {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 5rem;
+  justify-content: start;
+  padding: 3rem;
 }
 nav a {
   font-size: 2rem;
